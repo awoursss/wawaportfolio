@@ -675,7 +675,7 @@ footer {
         display: block;
     }
     
-    .nav-links {
+    .nav-links.main-nav {
         position: fixed;
         top: 0;
         right: -100%;
@@ -690,11 +690,11 @@ footer {
         z-index: 99;
     }
     
-    .nav-links.active {
+    .nav-links.main-nav.active {
         right: 0;
     }
     
-    .nav-links a {
+    .nav-links.main-nav a {
         font-size: 22px;
         font-weight: 600;
     }

@@ -164,3 +164,51 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         }
     });
 });
+
+// Remove fade-out class if page is loaded from cache (Safari/Mobile swipe back)
+window.addEventListener('pageshow', (event) => {
+    if (event.persisted) {
+        document.body.classList.remove('fade-out');
+    }
+});
+
+// Click Love Sprinkles Effect
+document.addEventListener('click', (e) => {
+    // Create 5 to 8 hearts bursting on click
+    const numHearts = Math.floor(Math.random() * 4) + 5;
+    
+    for (let i = 0; i < numHearts; i++) {
+        const heart = document.createElement('i');
+        heart.classList.add('fas', 'fa-heart', 'cursor-heart');
+        
+        // Random offset for burst effect
+        const offsetX = (Math.random() - 0.5) * 80;
+        const offsetY = (Math.random() - 0.5) * 80;
+        
+        heart.style.left = (e.pageX + offsetX) + 'px';
+        heart.style.top = (e.pageY + offsetY) + 'px';
+        
+        // Random size and rotation
+        const size = Math.random() * 12 + 8;
+        const rot = Math.random() * 360;
+        heart.style.fontSize = size + 'px';
+        heart.style.transform = `translate(-50%, -50%) rotate(${rot}deg) scale(0)`;
+        
+        document.body.appendChild(heart);
+        
+        // Trigger animation
+        requestAnimationFrame(() => {
+            heart.style.transition = 'all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+            heart.style.transform = `translate(-50%, -100px) rotate(${rot + 90}deg) scale(1)`;
+            heart.style.opacity = '1';
+        });
+        
+        // Fade out and remove
+        setTimeout(() => {
+            heart.style.opacity = '0';
+            setTimeout(() => {
+                heart.remove();
+            }, 500);
+        }, 400 + Math.random() * 400); // Random duration
+    }
+});
