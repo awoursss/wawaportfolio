@@ -74,8 +74,9 @@ document.addEventListener('mousemove', (e) => {
     sprinkleCounter++;
     if (sprinkleCounter % 5 !== 0) return;
 
-    const sprinkle = document.createElement('i');
-    sprinkle.className = 'fas fa-heart cursor-sprinkle';
+    const sprinkle = document.createElement('span');
+    sprinkle.className = 'cursor-sprinkle';
+    sprinkle.innerHTML = '🌸';
     sprinkle.style.left = `${e.pageX}px`;
     sprinkle.style.top = `${e.pageY}px`;
 
@@ -178,8 +179,9 @@ document.addEventListener('pointerdown', (e) => {
     const numHearts = Math.floor(Math.random() * 4) + 5;
     
     for (let i = 0; i < numHearts; i++) {
-        const heart = document.createElement('i');
-        heart.classList.add('fas', 'fa-heart', 'cursor-heart');
+        const heart = document.createElement('span');
+        heart.classList.add('cursor-heart');
+        heart.innerHTML = '🌸';
         
         // Random offset for burst effect
         const offsetX = (Math.random() - 0.5) * 80;
