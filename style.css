@@ -396,9 +396,9 @@ section {
 }
 
 .card-2 {
-    bottom: 60px;
+    bottom: 15px;
     right: 50%;
-    margin-right: 170px;
+    margin-right: 110px;
     background: linear-gradient(135deg, var(--color-soft-pink), var(--color-sky-blue));
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.5);
