@@ -173,7 +173,7 @@ window.addEventListener('pageshow', (event) => {
 });
 
 // Click Love Sprinkles Effect
-document.addEventListener('click', (e) => {
+document.addEventListener('pointerdown', (e) => {
     // Create 5 to 8 hearts bursting on click
     const numHearts = Math.floor(Math.random() * 4) + 5;
     
