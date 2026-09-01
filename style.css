@@ -402,7 +402,7 @@ section {
     background: linear-gradient(135deg, var(--color-soft-pink), var(--color-sky-blue));
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.5);
-    animation-delay: -2s;
+    animation: bounce-down 4s infinite alternate ease-in-out;
     z-index: 5;
 }
 
@@ -413,6 +413,16 @@ section {
 
     100% {
         transform: translateY(-20px);
+    }
+}
+
+@keyframes bounce-down {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(20px);
     }
 }
 
