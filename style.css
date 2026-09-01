@@ -375,15 +375,15 @@ section {
 .card-1 {
     top: 20px;
     right: 30px;
-    background: rgba(255, 153, 172, 0.85); /* blush */
-    color: var(--color-dark);
+    background: linear-gradient(135deg, var(--color-soft-pink), var(--color-sky-blue));
+    color: white;
     border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .card-2 {
     bottom: 50px;
     left: -10px;
-    background: rgba(255, 71, 126, 0.85); /* crimson */
+    background: linear-gradient(135deg, var(--color-soft-pink), var(--color-sky-blue));
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.5);
     animation-delay: -2s;

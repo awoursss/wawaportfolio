@@ -25,7 +25,20 @@
     </nav>
     <main style="padding: 140px 5% 80px; max-width: 900px; margin: 0 auto; position: relative; z-index: 2;">
         <div class="glass-panel interactive-panel" style="padding: 50px;">
-            <div style="height: 350px; border-radius: 16px; margin-bottom: 30px; background: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1000&auto=format&fit=crop') center/cover;"></div>
+            <div class="slider-container" style="position: relative; height: 350px; border-radius: 16px; margin-bottom: 30px; overflow: hidden;">
+                <div class="slider-wrapper" data-index="0" style="display: flex; height: 100%; transition: transform 0.4s ease;">
+                    <div class="slide" style="min-width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1000&auto=format&fit=crop') center/cover;"></div>
+                    <div class="slide" style="min-width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?q=80&w=1000&auto=format&fit=crop') center/cover;"></div>
+                    <div class="slide" style="min-width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1578574577315-3fbeb0cecdc2?q=80&w=1000&auto=format&fit=crop') center/cover;"></div>
+                </div>
+                <button class="slider-btn prev" onclick="moveSlide(this, -1)" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(255,255,255,0.7); border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; font-size: 18px; color: var(--color-dark); box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: all 0.3s; z-index: 10;"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn next" onclick="moveSlide(this, 1)" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(255,255,255,0.7); border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; font-size: 18px; color: var(--color-dark); box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: all 0.3s; z-index: 10;"><i class="fas fa-chevron-right"></i></button>
+                <div class="slider-dots" style="position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 10;">
+                    <span class="dot active" onclick="setSlide(this, 0)" style="width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.9); cursor: pointer; transition: all 0.3s; box-shadow: 0 2px 5px rgba(0,0,0,0.2);"></span>
+                    <span class="dot" onclick="setSlide(this, 1)" style="width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.5); cursor: pointer; transition: all 0.3s; box-shadow: 0 2px 5px rgba(0,0,0,0.2);"></span>
+                    <span class="dot" onclick="setSlide(this, 2)" style="width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.5); cursor: pointer; transition: all 0.3s; box-shadow: 0 2px 5px rgba(0,0,0,0.2);"></span>
+                </div>
+            </div>
             <h1 style="color: var(--color-dark); margin-bottom: 10px; font-size: 32px;">Supply Chain Analyst (Project)</h1>
             <p style="color: var(--color-soft-pink); font-weight: 600; margin-bottom: 30px; font-size: 18px;">Academic Research Project | 2023 - 2024</p>
             <div style="color: var(--color-text); line-height: 1.8; font-size: 17px;">
