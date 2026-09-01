@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Experiences | Zahwa Salsabila Arifia</title>
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Base Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Background Elements -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <a href="index.html" class="logo">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                <path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6L12 2Z" fill="url(#sparkleGradient)"></path>
+                <defs>
+                    <linearGradient id="sparkleGradient" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#ff477e"></stop>
+                        <stop offset="1" stop-color="#ff99ac"></stop>
+                    </linearGradient>
+                </defs>
+            </svg>
+            Zsa
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="btn btn-primary" style="padding: 8px 20px; font-size: 14px;"><i class="fas fa-arrow-left"></i> Back to Home</a></li>
+        </ul>
+    </nav>
+
+    <main style="padding: 140px 5% 80px; max-width: 1200px; margin: 0 auto; position: relative; z-index: 2;">
+        <div class="section-header" style="justify-content: center;">
+            <h2 style="text-align: center;">Detailed Experiences & Activities</h2>
+            <div class="divider" style="margin: 0 auto;"></div>
+        </div>
+        
+        <p style="text-align: center; color: var(--color-text-light); margin-bottom: 60px; font-size: 18px; max-width: 700px; margin-left: auto; margin-right: auto;">
+            A deeper look into my organizational activities, campus events, and practical engineering projects at Universitas Internasional Semen Indonesia.
+        </p>
+
+        <div class="project-grid">
+            <!-- Experience Item 1 -->
+            <div class="project-card glass-panel interactive-panel">
+                <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1542621334-a254cf47733d?q=80&w=800&auto=format&fit=crop'); background-size: cover; background-position: center;"></div>
+                <div class="project-info">
+                    <h3>Himpunan Mahasiswa (HIMA)</h3>
+                    <p>Served as the Head of Events, orchestrating multiple industrial management seminars and campus-wide workshops with over 300 participants.</p>
+                </div>
+            </div>
+            
+            <!-- Experience Item 2 -->
+            <div class="project-card glass-panel interactive-panel">
+                <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop'); background-size: cover; background-position: center;"></div>
+                <div class="project-info">
+                    <h3>Process Optimization Field Study</h3>
+                    <p>Conducted an on-site feasibility study for a local manufacturing plant to reduce supply chain bottlenecks by 15% using simulation tools.</p>
+                </div>
+            </div>
+            
+            <!-- Experience Item 3 -->
+            <div class="project-card glass-panel interactive-panel">
+                <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=800&auto=format&fit=crop'); background-size: cover; background-position: center;"></div>
+                <div class="project-info">
+                    <h3>National Business Plan Competition</h3>
+                    <p>Led a team of three in designing an innovative logistics platform, reaching the top 10 finalists nationally for technical feasibility.</p>
+                </div>
+            </div>
+            
+            <!-- Experience Item 4 -->
+            <div class="project-card glass-panel interactive-panel">
+                <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=800&auto=format&fit=crop'); background-size: cover; background-position: center;"></div>
+                <div class="project-info">
+                    <h3>Volunteer: Tech for Society</h3>
+                    <p>Organized a training bootcamp for high school students, introducing basic system modeling and strategic problem solving.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="position: relative; z-index: 2;">
+        <p>&copy; 2026 Zahwa Salsabila Arifia Portfolio. Crafted with ❤️.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        // Reveal animation for cards on load
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                card.style.transitionDelay = `${index * 0.15}s`;
+                
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html>
