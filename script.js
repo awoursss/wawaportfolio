@@ -136,3 +136,31 @@ document.querySelectorAll('a').forEach(anchor => {
         }
     });
 });
+
+// Mobile Menu Toggle Logic
+const mobileMenu = document.getElementById('mobile-menu');
+const navLinks = document.querySelector('.nav-links');
+
+if (mobileMenu) {
+    mobileMenu.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        const icon = mobileMenu.querySelector('i');
+        if (navLinks.classList.contains('active')) {
+            icon.classList.replace('fa-bars', 'fa-times');
+        } else {
+            icon.classList.replace('fa-times', 'fa-bars');
+        }
+    });
+}
+
+// Close mobile menu when a link is clicked
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        if (navLinks && navLinks.classList.contains('active')) {
+            navLinks.classList.remove('active');
+            if (mobileMenu) {
+                mobileMenu.querySelector('i').classList.replace('fa-times', 'fa-bars');
+            }
+        }
+    });
+});
